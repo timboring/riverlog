@@ -2,7 +2,28 @@
 
 {% block content %}
 <h2>Rivers</h2>
-{% for river in rivers %}
-{{ river }}<br />
-{% endfor %}
+<table>
+	<tr>
+		<th>Date</th>
+		<th>Put-on</th>
+		<th>Take-out</th>
+		<th>River</th>
+		<th>Section</th>
+		<th>USGS Level</th>
+		<th>Bridge Gauge</th>
+		<th>Notes</th>
+	</tr>
+	{% for river in rivers %}
+	<tr>
+		<td>{{ river.date }}</td>
+		<td>{{ river.put_on_time }}</td>
+		<td>{{ river.take_out_time }}</td>
+		<td>{{ river.river }}</td>
+		<td>{{ river.section }}</td>
+		<td>{{ river.usgs_level }}</td>
+		<td>{{ river.bridge_gauge }}</td>
+		<td>{{ river.notes }}</td>
+	</tr>
+	{% endfor %}
+</table>
 {% endblock %}

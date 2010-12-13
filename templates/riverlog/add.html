@@ -1,13 +1,15 @@
 {% extends "base.html" %}
 
 {% block title %}Add Entry{% endblock %}
-
 {% block content %}
+<h2>Add Run</h2>
+<div id="forms">
 <form action="" method="post">
 	<table>
 		{{ form.as_table }}
 	</table>
-	<input type="submit" value="Submit">
+	<p class="submit"><input type="submit" value="Submit"></p>
+</form>
 </form>
 
 {% endblock %}

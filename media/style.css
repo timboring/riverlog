@@ -20,9 +20,24 @@ a:hover {
 	#color: #FF00FF;
 }
 
-th {
-	text-align: right;
-	vertical-align: top;
+input {
+	font-weight: bold;
+}
+
+.submit input {
+	margin-left: 9em;
+}
+
+table {
+	width: 100%;
+	border: 1px solid black;
+	border-collapse: collapse;
+}
+
+th, td {
+	border: 1px solid black;
+	text-align: left;
+	padding: 5px;
 }
 
 #header {
@@ -41,10 +56,11 @@ th {
 }
 
 #navigation {
-  width: 15%;  
+  width: 200px;  
   position: absolute;
+	top: 225px;
   padding: 5px;
-  //border-top: 1px solid black;
+  border-top: 1px solid black;
   border-left: 1px solid black;
   border-right: 1px solid black;
   border-bottom: 1px solid black;
@@ -53,9 +69,9 @@ th {
 #nav_title {
   font-weight: bold;
 	color: #CC0033;
-  border-top: 1px solid black;
+  //border-top: 1px solid black;
 	padding-left: 5px;
-	padding-top: 2px;
+	padding-top: 5px;
 }
 
 #nav_links {
@@ -67,9 +83,23 @@ th {
 }
 
 #content {
-  width: 65%;
+  width: 75%;
   //padding: 5px;
   position: absolute;
-  left: 20%;
+	top: 225px;
+  left: 240px;
+}
+
+#forms table {
+	border: 1px solid black;
+}
+
+#forms td {
+	border: 0px;
+}
+
+#forms th {
+	border: 0px;
+	text-align: right;
 }
 
