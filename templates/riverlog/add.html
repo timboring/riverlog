@@ -3,6 +3,15 @@
 {% block title %}Add Entry{% endblock %}
 {% block content %}
 <h2>Add Run</h2>
+<div id="errors">
+	{% if errors %}
+		{% for error in errors %}
+			<ul>
+				<li>{{ error }}</li>
+			</ul>
+		{% endfor %}
+	{% endif %}
+</div>
 <div id="forms">
 <form action="" method="post">
 	<table>
@@ -10,6 +19,6 @@
 	</table>
 	<p class="submit"><input type="submit" value="Submit"></p>
 </form>
-</form>
+</div>
 
 {% endblock %}

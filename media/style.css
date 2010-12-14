@@ -28,6 +28,45 @@ input {
 	margin-left: 9em;
 }
 
+.fancy-table {
+	border-collapse: collapse;
+	border-bottom: 2px solid black;
+	border-top: 4px solid black;
+}
+
+.fancy-table thead {
+	border-width: 5px 0 1px 0;
+	font-weight: bold;
+}
+
+.fancy-table thead td {
+	background-color: #e3e9ff;
+	border-bottom: 1px solid black;
+	line-height: 1.4em;
+	padding: 0 0.25em;
+	vertical-align: top;
+}
+
+.even {
+	background-color: #fff;
+}
+
+.odd {
+	background-color: #FFFFE0;
+}
+
+.fork {
+	//background-color: #e3e9ff;
+	//border-bottom: 1px solid black;
+	margin: -1em -1em 0.5em -1em;
+	padding: 0.25em 0.5em;
+}
+
+.fork h1 {
+	font-size: 1.4 em;
+	margin: 0;
+}
+
 table {
 	width: 100%;
 	border: 1px solid black;
@@ -60,10 +99,10 @@ th, td {
   position: absolute;
 	top: 225px;
   padding: 5px;
-  border-top: 1px solid black;
-  border-left: 1px solid black;
-  border-right: 1px solid black;
-  border-bottom: 1px solid black;
+  //border-top: 1px solid black;
+  //border-left: 1px solid black;
+  //border-right: 1px solid black;
+  //border-bottom: 1px solid black;
 }
 
 #nav_title {

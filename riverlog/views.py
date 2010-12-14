@@ -16,6 +16,7 @@ def rivers(request):
 
 def add(request):
 	if request.method == 'POST':
+		#import pdb; pdb.set_trace()
 		form = forms.AddRunForm(request.POST)
 		if form.is_valid():
 			data = form.cleaned_data
@@ -29,7 +30,11 @@ def add(request):
 													notes=data.get('notes', None))
 
 			object.save()
-			return HttpResponseRedirect('/river/')
+		else:
+			errors = form.errors
+			data = form.data
+			return render_to_response('add.html', {'form': form, 'errors': errors})
+		return HttpResponseRedirect('/river/')
 	elif request.method == 'GET':
 		form = forms.AddRunForm()
 		return render_to_response('add.html', {'form': form,})
