@@ -22,7 +22,7 @@
 	<tbody>
 	{% for river in rivers %}
 	<tr class="{% cycle "even" "odd" %}">
-		<td>{{ river.date }}</td>
+		<td><a href="/river/{{ river.id }}">{{ river.date }}</a></td>
 		<td>{{ river.put_on_time }}</td>
 		<td>{{ river.take_out_time }}</td>
 		<td>{{ river.river }}</td>
