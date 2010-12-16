@@ -1,15 +1,15 @@
 from django.conf.urls.defaults import *
 from django.contrib import admin
-from riverlog import views
 import settings
 
 admin.autodiscover()
 
-urlpatterns = patterns('',
-		(r'^river/add$', views.add),
-		(r'^river/delete$', views.delete),
-		(r'^river/$', views.rivers),
-		('^$', views.home),
+urlpatterns = patterns('riverlog.views',
+		(r'^river/add$', 'add'),
+		(r'^river/delete$', 'delete'),
+		(r'^river/(\d+)/$', 'river'),
+		(r'^river/$', 'rivers'),
+		('^$', 'rivers'),
 )
 
 # urls for serving static content/media using django's dev server
