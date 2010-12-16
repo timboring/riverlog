@@ -17,7 +17,7 @@ a:visited {
 a:hover {
 	font-weight: bold;
 	text-decoration: underline;
-	#color: #FF00FF;
+	color: #FF00FF;
 }
 
 input {
@@ -26,6 +26,19 @@ input {
 
 .submit input {
 	margin-left: 9em;
+}
+
+.fancy-table-detail {
+	border-collapse: collapse;
+	border-bottom: 2px solid black;
+	border-top: 4px solid black;
+}
+
+.fancy-table-detail th {
+	background-color: #B0E0E6;
+	width: 15%;	
+	text-align: right;
+	font-weight: bold;
 }
 
 .fancy-table {

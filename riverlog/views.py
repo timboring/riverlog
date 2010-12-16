@@ -14,8 +14,9 @@ def rivers(request):
 	runs = models.Run.objects.all()
 	return render_to_response('rivers.html', {'rivers': runs})
 
-def river(request, river_id):
-	pass
+def river(request, run_id):
+	run = models.Run.objects.get(id=run_id)
+	return render_to_response('river.html', {'river': run})
 
 def add(request):
 	if request.method == 'POST':

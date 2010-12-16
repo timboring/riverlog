@@ -3,35 +3,40 @@
 {% block content %}
 
 <div class="fork">
-	<h1>Rivers</h1>
+	<h1>Run</h1>
 </div>
 
-<table class="fancy-table">
-	<thead>
+<table class="fancy-table-detail">
 		<tr>
-			<td>Date</td>
-			<td>Put-on</td>
-			<td>Take-out</td>
-			<td>River</td>
-			<td>Section</td>
-			<td>USGS Level</td>
-			<td>Bridge Gauge</td>
-			<td>Notes</td>
+			<th>Date</th>
+			<td>{{ river.date }}</td>
 		</tr>
-	</thead>
-	<tbody>
-	{% for river in rivers %}
-	<tr class="{% cycle "even" "odd" %}">
-		<td>{{ river.date }}</td>
-		<td>{{ river.put_on_time }}</td>
-		<td>{{ river.take_out_time }}</td>
-		<td>{{ river.river }}</td>
-		<td>{{ river.section }}</td>
-		<td>{{ river.usgs_level }}</td>
-		<td>{{ river.bridge_gauge }}</td>
-		<td>{{ river.notes }}</td>
-	</tr>
-	{% endfor %}
-	</tbody>
+		<tr>
+			<th>Put-on</th>
+			<td>{{ river.put_on_time }}</td>
+		</tr>
+		<tr>
+			<th>Take-out</th>
+			<td>{{ river.take_out_time }}</td>
+		</tr>
+		<tr>
+			<th>River</th>
+			<td>{{ river.river }}</td>
+		</tr>
+		<tr>
+			<th>Section</th>
+			<td>{{ river.section }}</td>
+		</tr>
+		<tr>
+			<th>USGS Level</th>
+			<td>{{ river.usgs_level }}</td>
+		</tr>
+		<tr>
+			<th>Bridge Gauge</th>
+			<td>{{ river.bridge_gauge }}</td>
+		</tr>
+			<th>Notes</th>
+			<td>{{ river.notes }}</td>
+		</tr>
 </table>
 {% endblock %}
