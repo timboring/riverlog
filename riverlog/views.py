@@ -3,6 +3,7 @@ from django.http import HttpResponseRedirect
 from django.shortcuts import render_to_response
 
 from riverlog import forms
+from riverlog import upload_runs
 from riverlog import models
 
 # Create your views here.
@@ -11,7 +12,7 @@ def home(request):
 	return render_to_response('index.html')
 
 def rivers(request):
-	runs = models.Run.objects.all()
+	runs = models.Run.objects.order_by('-date')
 	return render_to_response('rivers.html', {'rivers': runs})
 
 def river(request, run_id):
@@ -20,7 +21,6 @@ def river(request, run_id):
 
 def add(request):
 	if request.method == 'POST':
-		#import pdb; pdb.set_trace()
 		form = forms.AddRunForm(request.POST)
 		if form.is_valid():
 			data = form.cleaned_data
@@ -45,5 +45,19 @@ def add(request):
 	else:
 		return Http404
 
+def importruns(request):
+	if request.method == 'POST':
+		form = forms.UploadFileForm(request.POST, request.FILES)
+		if form.is_valid():
+			results = upload_runs.process_file(request.FILES['filename'])
+			return render_to_response('results.html', {'results': results})
+	elif request.method == 'GET':
+		return render_to_response('import.html')
+	else:
+		return Http404
+
 def delete(request):
+	pass
+
+def search(request):
 	pass

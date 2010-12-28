@@ -2,7 +2,11 @@
 
 {% block title %}Add Entry{% endblock %}
 {% block content %}
-<h2>Add Run</h2>
+
+<div class="fork">
+	<h1>Add Run</h1>
+</div>
+
 <div id="errors">
 	{% if errors %}
 		{% for error in errors %}
@@ -12,13 +16,13 @@
 		{% endfor %}
 	{% endif %}
 </div>
-<div id="forms">
-<form action="" method="post">
+<form id="add" action="" method="post">
 	<table>
 		{{ form.as_table }}
+		<tr><td colspan="2">
+			<input class="button" type="submit" value="Submit">
+		</td></tr>
 	</table>
-	<p class="submit"><input type="submit" value="Submit"></p>
 </form>
-</div>
 
 {% endblock %}

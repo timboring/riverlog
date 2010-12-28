@@ -21,11 +21,11 @@ a:hover {
 }
 
 input {
-	font-weight: bold;
 }
 
 .submit input {
 	margin-left: 9em;
+	font-weight: bold;
 }
 
 .fancy-table-detail {
@@ -35,7 +35,7 @@ input {
 }
 
 .fancy-table-detail th {
-	background-color: #B0E0E6;
+	background-color: #e3e9ff;
 	width: 15%;	
 	text-align: right;
 	font-weight: bold;
@@ -58,6 +58,37 @@ input {
 	line-height: 1.4em;
 	padding: 0 0.25em;
 	vertical-align: top;
+}
+
+form#add {
+	border: 1px solid black;
+}
+
+form#add td {
+	border: 0px;
+}
+
+form#add th {
+	border: 0px;
+	text-align: right;
+}
+
+.button {
+	font-weight: bold;
+	text-align: center;
+}
+
+#forms {
+	border: 1px solid black;
+}
+
+#forms td {
+	border: 0px;
+}
+
+#forms th {
+	border: 0px;
+	text-align: right;
 }
 
 .even {
@@ -142,16 +173,4 @@ th, td {
   left: 240px;
 }
 
-#forms table {
-	border: 1px solid black;
-}
-
-#forms td {
-	border: 0px;
-}
-
-#forms th {
-	border: 0px;
-	text-align: right;
-}
 

@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block title %}Import Results{% endblock %}
+{% block content %}
+
+<div class="fork">
+	<h1>Import Results</h1>
+</div>
+
+Successfully saved records: {{ results.saved }} <br />
+Errors: {{ results.errors }} <br />
+{% endblock %}
