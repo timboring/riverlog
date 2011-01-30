@@ -2,11 +2,7 @@
 {% block title %}Rivers{% endblock %}
 {% block content %}
 
-<div class="fork">
-	<h1>Rivers</h1>
-</div>
-
-<table class="fancy-table">
+<table>
 	<thead>
 		<tr>
 			<td>Date</td>
@@ -21,7 +17,7 @@
 	</thead>
 	<tbody>
 	{% for river in rivers %}
-	<tr class="{% cycle "even" "odd" %}">
+	<tr>
 		<td><a href="/river/{{ river.id }}">{{ river.date }}</a></td>
 		<td>{{ river.put_on_time }}</td>
 		<td>{{ river.take_out_time }}</td>
