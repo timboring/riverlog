@@ -48,8 +48,12 @@ def add(request):
 		raise Http404
 
 
-def delete(request):
-	raise Http404
+def delete(request, run_id):
+	run = models.Run.objects.get(id=run_id)
+	if request.method == 'POST':
+			run.delete()	
+			return HttpResponseRedirect('/river/')
+	return render_to_response('delete.html', {'river': run,})
 
 
 def importruns(request):

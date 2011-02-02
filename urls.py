@@ -6,7 +6,7 @@ admin.autodiscover()
 
 urlpatterns = patterns('riverlog.views',
 		(r'^river/add$', 'add'),
-		(r'^river/delete$', 'delete'),
+		(r'^river/delete/(\d+)/$', 'delete'),
 		(r'^river/importruns$', 'importruns'),
 		(r'^river/(\d+)/$', 'river'),
 		(r'^river/$', 'rivers'),

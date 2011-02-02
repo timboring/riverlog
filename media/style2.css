@@ -84,6 +84,13 @@ body {
 	background-color: #CCCCFF;
 }
 
+.warning {
+	background-color: red;
+	color: white;
+	font-weight: bold;
+	text-align: right;
+}
+
 .date {
 	width: 10%;
 }

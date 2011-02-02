@@ -39,7 +39,7 @@
 		<td>{{ river.usgs_level }}</td>
 		<td>{{ river.bridge_gauge }}</td>
 		<td>{{ river.notes }}</td>
-		<td><a href=/river/delete><img src="/static/delete-icon.png"/></a></td>
+		<td><a href=/river/delete/{{ river.id }}><img src="/static/delete-icon.png"/></a></td>
 	</tr>
 	{% endfor %}
 </table>
