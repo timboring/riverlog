@@ -2,22 +2,35 @@
 {% block title %}Rivers{% endblock %}
 {% block content %}
 
+<div>
+	<h1>Runs</h1>
+</div>
+
 <table>
-	<thead>
-		<tr>
-			<td>Date</td>
-			<td>Put-on</td>
-			<td>Take-out</td>
-			<td>River</td>
-			<td>Section</td>
-			<td>USGS Level</td>
-			<td>Bridge Gauge</td>
-			<td>Notes</td>
-		</tr>
-	</thead>
-	<tbody>
-	{% for river in rivers %}
+	<colgroup>
+		<col class="date" />
+		<col class="puton" />
+		<col class="takeout" />
+		<col class="river" />
+		<col class="section" />
+		<col class="usgs" />
+		<col class="bridge" />
+		<col class="notes" />
+		<col class="delete" />
+	</colgroup>
 	<tr>
+		<th>Date</th>
+		<th>Put-on</th>
+		<th>Take-out</th>
+		<th>River</th>
+		<th>Section</th>
+		<th>USGS Level</th>
+		<th>Bridge Gauge</th>
+		<th>Notes</th>
+		<th>Delete</th>
+	</tr>
+	{% for river in rivers %}
+	<tr class="{% cycle 'odd' 'even' %}">
 		<td><a href="/river/{{ river.id }}">{{ river.date }}</a></td>
 		<td>{{ river.put_on_time }}</td>
 		<td>{{ river.take_out_time }}</td>
@@ -26,8 +39,8 @@
 		<td>{{ river.usgs_level }}</td>
 		<td>{{ river.bridge_gauge }}</td>
 		<td>{{ river.notes }}</td>
+		<td><a href=/river/delete><img src="/static/delete-icon.png"/></a></td>
 	</tr>
 	{% endfor %}
-	</tbody>
 </table>
 {% endblock %}

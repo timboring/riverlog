@@ -6,18 +6,20 @@ from riverlog import forms
 from riverlog import upload_runs
 from riverlog import models
 
-# Create your views here.
 
 def home(request):
 	return render_to_response('index.html')
+
 
 def rivers(request):
 	runs = models.Run.objects.order_by('-date')
 	return render_to_response('rivers.html', {'rivers': runs})
 
+
 def river(request, run_id):
 	run = models.Run.objects.get(id=run_id)
 	return render_to_response('river.html', {'river': run})
+
 
 def add(request):
 	if request.method == 'POST':
@@ -43,7 +45,12 @@ def add(request):
 		form = forms.AddRunForm()
 		return render_to_response('add.html', {'form': form,})
 	else:
-		return Http404
+		raise Http404
+
+
+def delete(request):
+	raise Http404
+
 
 def importruns(request):
 	if request.method == 'POST':
@@ -56,8 +63,6 @@ def importruns(request):
 	else:
 		return Http404
 
-def delete(request):
-	pass
 
 def search(request):
 	pass

@@ -18,6 +18,11 @@ body {
 	margin-right: 100px;
 }
 
+#navbar h1 a {
+	text-decoration: none;
+	font-color: black;
+}
+
 #navbar h2 {
 	display: inline;
 	margin-right: 25px;
@@ -64,9 +69,59 @@ body {
 	width: 100%;
 }
 
-#content td, th {
-	border: 1px solid #999;
+#content thead {
+	background-color: #CCCCFF;
+	border: 1px solid blue;
 	padding: 0.1em 1em;
+}
+
+#content td, th {
+	border: 1px solid blue;
+	padding: 0.1em 1em;
+}
+
+#content th {
+	background-color: #CCCCFF;
+}
+
+.date {
+	width: 10%;
+}
+
+.puton {
+	width: 5%;
+}
+
+.takeout {
+	width: 5%;
+}
+
+.river {
+	width: 10%;
+}
+
+.section {
+	width: 10%;
+}
+
+.usgs {
+	width: 5%;
+}
+
+.bridge {
+	width: 5%;
+}
+
+.notes {
+	width: 45%;
+}
+
+.delete {
+	width: 5%;
+}
+
+.odd {
+	background-color: #FFFFCC;
 }
 
 #right-nav {
@@ -89,4 +144,5 @@ body {
 	display: inline;
 	margin-right: 15px;
 	font-size: small;
+	color: #CCCCCC;
 }
